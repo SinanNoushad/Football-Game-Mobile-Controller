@@ -1,0 +1,495 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ardalis.GuardClauses</name>
+    </assembly>
+    <members>
+        <member name="T:Ardalis.GuardClauses.NotFoundException">
+            <summary>
+            Represents error that occurs if a queried object by a particular key is null (not found).
+            </summary>
+        </member>
+        <member name="M:Ardalis.GuardClauses.NotFoundException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the NotFoundException class with a specified name of the queried object and its key.
+            </summary>
+            <param name="objectName">Name of the queried object.</param>
+            <param name="key">The value by which the object is queried.</param>
+        </member>
+        <member name="M:Ardalis.GuardClauses.NotFoundException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NotFoundException class with a specified name of the queried object, its key,
+            and the exception that is the cause of this exception.
+            </summary>
+            <param name="objectName">Name of the queried object.</param>
+            <param name="key">The value by which the object is queried.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Ardalis.GuardClauses.IGuardClause">
+            <summary>
+            Simple interface to provide a generic mechanism to build guard clause extension methods from.
+            </summary>
+        </member>
+        <member name="T:Ardalis.GuardClauses.Guard">
+            <summary>
+            An entry point to a set of Guard Clauses defined as extension methods on IGuardClause.
+            </summary>
+            <remarks>See http://www.weeklydevtips.com/004 on Guard Clauses</remarks>
+        </member>
+        <member name="P:Ardalis.GuardClauses.Guard.Against">
+            <summary>
+            An entry point to a set of Guard Clauses.
+            </summary>
+        </member>
+        <member name="T:Ardalis.GuardClauses.GuardClauseExtensions">
+            <summary>
+            A collection of common guard clauses, implemented as extensions.
+            </summary>
+            <example>
+            Guard.Against.Null(input, nameof(input));
+            </example>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.AgainstExpression``1(Ardalis.GuardClauses.IGuardClause,System.Func{``0,System.Boolean},``0,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="func"/> evaluates to false for given <paramref name="input"/> 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="func"></param>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="message"></param>
+            <returns><paramref name="input"/> if the <paramref name="func"/> evaluates to true </returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.InvalidFormat(Ardalis.GuardClauses.IGuardClause,System.String,System.String,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if  <paramref name="input"/> doesn't match the <paramref name="regexPattern"/>.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="regexPattern"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.InvalidInput``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if  <paramref name="input"/> doesn't satisfy the <paramref name="predicate"/> function.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="predicate"></param>
+            <param name="message">Optional. Custom error message</param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Negative(Ardalis.GuardClauses.IGuardClause,System.Int32,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input"/> is negative.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Negative(Ardalis.GuardClauses.IGuardClause,System.Int64,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input"/> is negative.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Negative(Ardalis.GuardClauses.IGuardClause,System.Decimal,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input"/> is negative.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Negative(Ardalis.GuardClauses.IGuardClause,System.Single,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input"/> is negative.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Negative(Ardalis.GuardClauses.IGuardClause,System.Double,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input"/> is negative.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Negative(Ardalis.GuardClauses.IGuardClause,System.TimeSpan,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input"/> is negative.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Negative``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input"/> is negative.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NegativeOrZero(Ardalis.GuardClauses.IGuardClause,System.Int32,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/> if <paramref name="input"/> is negative or zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative or zero.</returns>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NegativeOrZero(Ardalis.GuardClauses.IGuardClause,System.Int64,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/> if <paramref name="input"/> is negative or zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative or zero.</returns>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NegativeOrZero(Ardalis.GuardClauses.IGuardClause,System.Decimal,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/> if <paramref name="input"/> is negative or zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative or zero.</returns>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NegativeOrZero(Ardalis.GuardClauses.IGuardClause,System.Single,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/> if <paramref name="input"/> is negative or zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative or zero.</returns>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NegativeOrZero(Ardalis.GuardClauses.IGuardClause,System.Double,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/> if <paramref name="input"/> is negative or zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative or zero.</returns>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NegativeOrZero(Ardalis.GuardClauses.IGuardClause,System.TimeSpan,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/> if <paramref name="input"/> is negative or zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative or zero.</returns>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NegativeOrZero``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException"/> if <paramref name="input"/> is negative or zero. 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not negative or zero.</returns>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NotFound``1(Ardalis.GuardClauses.IGuardClause,System.String,``0,System.String)">
+            <summary>
+            Throws an <see cref="T:Ardalis.GuardClauses.NotFoundException" /> if <paramref name="input" /> with <paramref name="key" /> is not found.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="guardClause"></param>
+            <param name="key"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <returns><paramref name="input" /> if the value is not null.</returns>
+            <exception cref="T:Ardalis.GuardClauses.NotFoundException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NotFound``2(Ardalis.GuardClauses.IGuardClause,``0,``1,System.String)">
+            <summary>
+            Throws an <see cref="T:Ardalis.GuardClauses.NotFoundException" /> if <paramref name="input" /> with <paramref name="key" /> is not found.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TKey"></typeparam>
+            <param name="guardClause"></param>
+            <param name="key"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <returns><paramref name="input" /> if the value is not null.</returns>
+            <exception cref="T:Ardalis.GuardClauses.NotFoundException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Null``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException" /> if <paramref name="input" /> is null.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not null.</returns>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NullOrEmpty(Ardalis.GuardClauses.IGuardClause,System.String,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException" /> if <paramref name="input" /> is null.
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is an empty string.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not an empty string or null.</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NullOrEmpty(Ardalis.GuardClauses.IGuardClause,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException" /> if <paramref name="input" /> is null.
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is an empty guid.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not an empty guid or null.</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NullOrEmpty``1(Ardalis.GuardClauses.IGuardClause,System.Collections.Generic.IEnumerable{``0},System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException" /> if <paramref name="input" /> is null.
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is an empty enumerable.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not an empty enumerable or null.</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NullOrWhiteSpace(Ardalis.GuardClauses.IGuardClause,System.String,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException" /> if <paramref name="input" /> is null.
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is an empty or white space string.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not an empty or whitespace string.</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Default``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is default for that type.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not default for that type.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.NullOrInvalidInput``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,System.Func{``0,System.Boolean},System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentNullException"/> if <paramref name="input"/> is null
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input"/> doesn't satisfy the <paramref name="predicate"/> function.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="predicate"></param>
+            <param name="message">Optional. Custom error message</param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.EnumOutOfRange``1(Ardalis.GuardClauses.IGuardClause,System.Int32,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ComponentModel.InvalidEnumArgumentException" /> if <paramref name="input"/> is not a valid enum value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not out of range.</returns>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.EnumOutOfRange``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ComponentModel.InvalidEnumArgumentException" /> if <paramref name="input"/> is not a valid enum value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            /// <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not out of range.</returns>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.OutOfRange``1(Ardalis.GuardClauses.IGuardClause,System.Collections.Generic.IEnumerable{``0},System.String,``0,``0,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException" /> if  any <paramref name="input"/>'s item is less than <paramref name="rangeFrom"/> or greater than <paramref name="rangeTo"/>.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="rangeFrom"></param>
+            <param name="rangeTo"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if any item is not out of range.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.OutOfSQLDateRange(Ardalis.GuardClauses.IGuardClause,System.DateTime,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException" /> if <paramref name="input" /> is not in the range of valid SqlDateTime values.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is in the range of valid SqlDateTime values.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.OutOfRange``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,``0,``0,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentOutOfRangeException" /> if <paramref name="input"/> is less than <paramref name="rangeFrom"/> or greater than <paramref name="rangeTo"/>.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="rangeFrom"></param>
+            <param name="rangeTo"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not out of range.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Zero(Ardalis.GuardClauses.IGuardClause,System.Int32,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not zero.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Zero(Ardalis.GuardClauses.IGuardClause,System.Int64,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not zero.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Zero(Ardalis.GuardClauses.IGuardClause,System.Decimal,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not zero.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Zero(Ardalis.GuardClauses.IGuardClause,System.Single,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not zero.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Zero(Ardalis.GuardClauses.IGuardClause,System.Double,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not zero.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Zero(Ardalis.GuardClauses.IGuardClause,System.TimeSpan,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <returns><paramref name="input" /> if the value is not zero.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Ardalis.GuardClauses.GuardClauseExtensions.Zero``1(Ardalis.GuardClauses.IGuardClause,``0,System.String,System.String)">
+            <summary>
+            Throws an <see cref="T:System.ArgumentException" /> if <paramref name="input" /> is zero.
+            </summary>
+            <param name="guardClause"></param>
+            <param name="input"></param>
+            <param name="parameterName"></param>
+            <param name="message">Optional. Custom error message</param>
+            <returns><paramref name="input" /> if the value is not zero.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:Ardalis.GuardClauses.ValidatedNotNullAttribute">
+            <summary>
+            Add to methods that check input for null and throw if the input is null.
+            </summary>
+        </member>
+    </members>
+</doc>

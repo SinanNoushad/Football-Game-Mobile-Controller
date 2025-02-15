@@ -2,7 +2,6 @@
 
 A cross-platform mobile controller that converts your smartphone into a versatile game controller for PC gaming. Built with Flutter and C#, it supports both WiFi and Bluetooth connectivity while providing a fully customizable touch interface.
 
-![Controller Screenshot Placeholder](/api/placeholder/800/400)
 
 ## Features
 

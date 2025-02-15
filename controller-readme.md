@@ -7,8 +7,8 @@ A cross-platform mobile controller that converts your smartphone into a versatil
 
 ### Connectivity
 - **Dual Connection Modes**
-  - WiFi with auto-discovery
-  - Bluetooth support
+  - WiFi with auto-discovery(Completed)
+  - Bluetooth support(developing)
 - **Easy Server Discovery**
   - Automatic server detection
   - Manual IP configuration
@@ -36,7 +36,7 @@ A cross-platform mobile controller that converts your smartphone into a versatil
   - Special move combinations for sports games
 
 - **Professional UI**
-  - Modern, dark-themed interface
+  - Modern interface
   - Real-time connection status
   - Command logging
   - Session management

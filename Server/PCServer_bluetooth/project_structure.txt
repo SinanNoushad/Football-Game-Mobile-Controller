@@ -1,0 +1,263 @@
+﻿Folder PATH listing for volume Acer
+Volume serial number is 80EC-C066
+C:.
+ª   App.config
+ª   BluetoothControllerServer.cs
+ª   ControllerManager.cs
+ª   GamepadVibration.cs
+ª   icon.ico
+ª   packages.config
+ª   PCServer_bluetooth.csproj
+ª   PCServer_bluetooth.csproj.user
+ª   PCServer_bluetooth.sln
+ª   PCServer_bluetooth_TemporaryKey.pfx
+ª   Program.cs
+ª   Program.resx
+ª   project_structure.txt
+ª   ServerAdvertiser.cs
+ª   VirtualController.cs
+ª   
++---.vs
+ª       PCServer_bluetooth.csproj.dtbcache.json
+ª       
++---bin
+ª   +---Debug
+ª   ª   ª   Ardalis.GuardClauses.dll
+ª   ª   ª   Ardalis.GuardClauses.pdb
+ª   ª   ª   Ardalis.GuardClauses.xml
+ª   ª   ª   Common.Logging.Core.dll
+ª   ª   ª   Common.Logging.Core.pdb
+ª   ª   ª   Common.Logging.Core.xml
+ª   ª   ª   Common.Logging.dll
+ª   ª   ª   Common.Logging.pdb
+ª   ª   ª   Common.Logging.xml
+ª   ª   ª   Football Controller.application
+ª   ª   ª   Football Controller.exe
+ª   ª   ª   Football Controller.exe.config
+ª   ª   ª   Football Controller.exe.manifest
+ª   ª   ª   Football Controller.pdb
+ª   ª   ª   InTheHand.Net.Personal.dll
+ª   ª   ª   InTheHand.Net.Personal.xml
+ª   ª   ª   JetBrains.Annotations.dll
+ª   ª   ª   JetBrains.Annotations.xml
+ª   ª   ª   Makaretu.Dns.dll
+ª   ª   ª   Makaretu.Dns.Multicast.dll
+ª   ª   ª   Makaretu.Dns.Multicast.xml
+ª   ª   ª   Makaretu.Dns.pdb
+ª   ª   ª   Makaretu.Dns.xml
+ª   ª   ª   Nefarius.ViGEm.Client.dll
+ª   ª   ª   Newtonsoft.Json.dll
+ª   ª   ª   Newtonsoft.Json.xml
+ª   ª   ª   Nito.AsyncEx.Context.dll
+ª   ª   ª   Nito.AsyncEx.Context.xml
+ª   ª   ª   Nito.AsyncEx.Coordination.dll
+ª   ª   ª   Nito.AsyncEx.Coordination.xml
+ª   ª   ª   Nito.AsyncEx.Interop.WaitHandles.dll
+ª   ª   ª   Nito.AsyncEx.Interop.WaitHandles.xml
+ª   ª   ª   Nito.AsyncEx.Oop.dll
+ª   ª   ª   Nito.AsyncEx.Oop.xml
+ª   ª   ª   Nito.AsyncEx.Tasks.dll
+ª   ª   ª   Nito.AsyncEx.Tasks.xml
+ª   ª   ª   Nito.Cancellation.dll
+ª   ª   ª   Nito.Cancellation.xml
+ª   ª   ª   Nito.Collections.Deque.dll
+ª   ª   ª   Nito.Collections.Deque.xml
+ª   ª   ª   Nito.Disposables.dll
+ª   ª   ª   Nito.Disposables.xml
+ª   ª   ª   PCServer_bluetooth.exe
+ª   ª   ª   PCServer_bluetooth.exe.config
+ª   ª   ª   PCServer_bluetooth.pdb
+ª   ª   ª   SharpDX.DirectInput.dll
+ª   ª   ª   SharpDX.DirectInput.pdb
+ª   ª   ª   SharpDX.DirectInput.xml
+ª   ª   ª   SharpDX.dll
+ª   ª   ª   SharpDX.pdb
+ª   ª   ª   SharpDX.XInput.dll
+ª   ª   ª   SharpDX.XInput.pdb
+ª   ª   ª   SharpDX.XInput.xml
+ª   ª   ª   SimpleBase.dll
+ª   ª   ª   SimpleBase.pdb
+ª   ª   ª   System.Buffers.dll
+ª   ª   ª   System.Buffers.xml
+ª   ª   ª   System.Collections.Immutable.dll
+ª   ª   ª   System.Collections.Immutable.xml
+ª   ª   ª   System.Memory.dll
+ª   ª   ª   System.Memory.xml
+ª   ª   ª   System.Net.IPNetwork.dll
+ª   ª   ª   System.Numerics.Vectors.dll
+ª   ª   ª   System.Numerics.Vectors.xml
+ª   ª   ª   System.Runtime.CompilerServices.Unsafe.dll
+ª   ª   ª   System.Runtime.CompilerServices.Unsafe.xml
+ª   ª   ª   vJoyInterfaceWrap.dll
+ª   ª   ª   websocket-sharp.dll
+ª   ª   ª   websocket-sharp.xml
+ª   ª   ª   WindowsInput.dll
+ª   ª   ª   WindowsInput.xml
+ª   ª   ª   
+ª   ª   +---app.publish
+ª   ª           Football Controller.exe
+ª   ª           
+ª   +---Release
+ª       ª   Ardalis.GuardClauses.dll
+ª       ª   Ardalis.GuardClauses.pdb
+ª       ª   Ardalis.GuardClauses.xml
+ª       ª   Common.Logging.Core.dll
+ª       ª   Common.Logging.Core.pdb
+ª       ª   Common.Logging.Core.xml
+ª       ª   Common.Logging.dll
+ª       ª   Common.Logging.pdb
+ª       ª   Common.Logging.xml
+ª       ª   Football Controller.application
+ª       ª   Football Controller.exe
+ª       ª   Football Controller.exe.config
+ª       ª   Football Controller.exe.manifest
+ª       ª   Football Controller.pdb
+ª       ª   InTheHand.Net.Personal.dll
+ª       ª   InTheHand.Net.Personal.xml
+ª       ª   JetBrains.Annotations.dll
+ª       ª   JetBrains.Annotations.xml
+ª       ª   Makaretu.Dns.dll
+ª       ª   Makaretu.Dns.Multicast.dll
+ª       ª   Makaretu.Dns.Multicast.xml
+ª       ª   Makaretu.Dns.pdb
+ª       ª   Makaretu.Dns.xml
+ª       ª   Nefarius.ViGEm.Client.dll
+ª       ª   Newtonsoft.Json.dll
+ª       ª   Newtonsoft.Json.xml
+ª       ª   Nito.AsyncEx.Context.dll
+ª       ª   Nito.AsyncEx.Context.xml
+ª       ª   Nito.AsyncEx.Coordination.dll
+ª       ª   Nito.AsyncEx.Coordination.xml
+ª       ª   Nito.AsyncEx.Interop.WaitHandles.dll
+ª       ª   Nito.AsyncEx.Interop.WaitHandles.xml
+ª       ª   Nito.AsyncEx.Oop.dll
+ª       ª   Nito.AsyncEx.Oop.xml
+ª       ª   Nito.AsyncEx.Tasks.dll
+ª       ª   Nito.AsyncEx.Tasks.xml
+ª       ª   Nito.Cancellation.dll
+ª       ª   Nito.Cancellation.xml
+ª       ª   Nito.Collections.Deque.dll
+ª       ª   Nito.Collections.Deque.xml
+ª       ª   Nito.Disposables.dll
+ª       ª   Nito.Disposables.xml
+ª       ª   SharpDX.DirectInput.dll
+ª       ª   SharpDX.DirectInput.pdb
+ª       ª   SharpDX.DirectInput.xml
+ª       ª   SharpDX.dll
+ª       ª   SharpDX.pdb
+ª       ª   SharpDX.XInput.dll
+ª       ª   SharpDX.XInput.pdb
+ª       ª   SharpDX.XInput.xml
+ª       ª   SimpleBase.dll
+ª       ª   SimpleBase.pdb
+ª       ª   System.Buffers.dll
+ª       ª   System.Buffers.xml
+ª       ª   System.Collections.Immutable.dll
+ª       ª   System.Collections.Immutable.xml
+ª       ª   System.Memory.dll
+ª       ª   System.Memory.xml
+ª       ª   System.Net.IPNetwork.dll
+ª       ª   System.Numerics.Vectors.dll
+ª       ª   System.Numerics.Vectors.xml
+ª       ª   System.Runtime.CompilerServices.Unsafe.dll
+ª       ª   System.Runtime.CompilerServices.Unsafe.xml
+ª       ª   vJoyInterfaceWrap.dll
+ª       ª   websocket-sharp.dll
+ª       ª   websocket-sharp.xml
+ª       ª   WindowsInput.dll
+ª       ª   WindowsInput.xml
+ª       ª   
+ª       +---app.publish
+ª           ª   autorun.inf
+ª           ª   Football Controller.application
+ª           ª   Football Controller.exe
+ª           ª   setup.exe
+ª           ª   
+ª           +---Application Files
+ª               +---Football Controller_1_0_0_4
+ª                       Ardalis.GuardClauses.dll.deploy
+ª                       Common.Logging.Core.dll.deploy
+ª                       Common.Logging.dll.deploy
+ª                       Football Controller.exe.config.deploy
+ª                       Football Controller.exe.deploy
+ª                       Football Controller.exe.manifest
+ª                       icon.ico.deploy
+ª                       InTheHand.Net.Personal.dll.deploy
+ª                       JetBrains.Annotations.dll.deploy
+ª                       Makaretu.Dns.dll.deploy
+ª                       Makaretu.Dns.Multicast.dll.deploy
+ª                       Nefarius.ViGEm.Client.dll.deploy
+ª                       Newtonsoft.Json.dll.deploy
+ª                       Nito.AsyncEx.Context.dll.deploy
+ª                       Nito.AsyncEx.Coordination.dll.deploy
+ª                       Nito.AsyncEx.Interop.WaitHandles.dll.deploy
+ª                       Nito.AsyncEx.Oop.dll.deploy
+ª                       Nito.AsyncEx.Tasks.dll.deploy
+ª                       Nito.Cancellation.dll.deploy
+ª                       Nito.Collections.Deque.dll.deploy
+ª                       Nito.Disposables.dll.deploy
+ª                       SharpDX.DirectInput.dll.deploy
+ª                       SharpDX.dll.deploy
+ª                       SharpDX.XInput.dll.deploy
+ª                       SimpleBase.dll.deploy
+ª                       System.Buffers.dll.deploy
+ª                       System.Collections.Immutable.dll.deploy
+ª                       System.Memory.dll.deploy
+ª                       System.Net.IPNetwork.dll.deploy
+ª                       System.Numerics.Vectors.dll.deploy
+ª                       System.Runtime.CompilerServices.Unsafe.dll.deploy
+ª                       vJoyInterfaceWrap.dll.deploy
+ª                       websocket-sharp.dll.deploy
+ª                       WindowsInput.dll.deploy
+ª                       
++---Configuration
+ª       ServerConfig.cs
+ª       
++---Models
+ª       ControllerState.cs
+ª       
++---obj
+ª   +---Debug
+ª   ª   ª   .NETFramework,Version=v4.8.AssemblyAttributes.cs
+ª   ª   ª   DesignTimeResolveAssemblyReferences.cache
+ª   ª   ª   DesignTimeResolveAssemblyReferencesInput.cache
+ª   ª   ª   Football Controller.application
+ª   ª   ª   Football Controller.exe
+ª   ª   ª   Football Controller.exe.manifest
+ª   ª   ª   Football Controller.pdb
+ª   ª   ª   PCServer.29D8E943.Up2Date
+ª   ª   ª   PCServer.Program.resources
+ª   ª   ª   PCServer_bluetooth.csproj.AssemblyReference.cache
+ª   ª   ª   PCServer_bluetooth.csproj.CoreCompileInputs.cache
+ª   ª   ª   PCServer_bluetooth.csproj.FileListAbsolute.txt
+ª   ª   ª   PCServer_bluetooth.csproj.GenerateResource.cache
+ª   ª   ª   PCServer_bluetooth.exe
+ª   ª   ª   PCServer_bluetooth.pdb
+ª   ª   ª   
+ª   ª   +---TempPE
+ª   +---Release
+ª           .NETFramework,Version=v4.8.AssemblyAttributes.cs
+ª           DesignTimeResolveAssemblyReferencesInput.cache
+ª           Football Controller.application
+ª           Football Controller.exe
+ª           Football Controller.exe.manifest
+ª           Football Controller.pdb
+ª           PCServer.29D8E943.Up2Date
+ª           PCServer.Program.resources
+ª           PCServer_bluetooth.csproj.AssemblyReference.cache
+ª           PCServer_bluetooth.csproj.CoreCompileInputs.cache
+ª           PCServer_bluetooth.csproj.FileListAbsolute.txt
+ª           PCServer_bluetooth.csproj.GenerateResource.cache
+ª           
++---Properties
+ª       AssemblyInfo.cs
+ª       
++---Services
+        BluetoothService.cs
+        ControllerManager.cs
+        IBluetoothService.cs
+        IVirtualController.cs
+        IWebSocketServer.cs
+        VirtualController.cs
+        WebSocketServer.cs
+        
